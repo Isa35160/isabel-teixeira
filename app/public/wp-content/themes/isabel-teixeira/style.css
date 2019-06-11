@@ -1,0 +1,102 @@
+/*
+Theme Name:   isabel-teixeira
+Description:  theme from scratch
+Author:       Isabel Teixeira
+Version:      0.1.0
+*/
+header {
+  min-height: 10vh;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header .header_logo a {
+    font-family: "Handlee", cursive;
+    font-size: 2rem;
+    text-shadow: 1px 1px 20px #a4a4a4; }
+  header .header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem; }
+    header .header_nav .header_nav_principal {
+      width: 50%;
+      padding: 0 15px; }
+      header .header_nav .header_nav_principal .menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0; }
+        header .header_nav .header_nav_principal .menu .menu-item {
+          transition: 0.4s ease;
+          border-top: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          margin: 0 20px;
+          padding: 20px 0;
+          width: 25%;
+          text-align: center; }
+          header .header_nav .header_nav_principal .menu .menu-item:hover {
+            border-top: 3px solid #ffffff;
+            border-bottom: 3px solid #ffffff;
+            padding: 15px 0; }
+          header .header_nav .header_nav_principal .menu .menu-item a {
+            font-family: "Allerta", sans-serif;
+            font-weight: bold; }
+  header .menu_burger {
+    display: none; }
+
+footer {
+  min-height: 10vh;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0; }
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 15px 0; }
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 15px 0; }
+
+img {
+  max-width: 100%; }
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto; }
+
+body {
+  background-image: url("images/homepage.png");
+  background-size: cover;
+  overflow: hidden;
+  background-position: bottom;
+  color: #fff; }
+  body .main_homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; }
+    body .main_homepage h1 {
+      padding-bottom: 30px; }
