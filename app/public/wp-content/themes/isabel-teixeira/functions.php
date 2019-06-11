@@ -19,11 +19,9 @@ function insert_css() {
     wp_enqueue_style( 'montserrat', 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' );
     wp_enqueue_style('font-montserrat');
 
-    // Google Fonts
     wp_enqueue_style( 'openSans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap' );
     wp_enqueue_style('font-openSans');
  
-    // Google Fonts
     wp_enqueue_style( 'handlee', 'https://fonts.googleapis.com/css?family=Handlee&display=swap' );
     wp_enqueue_style('font-handlee');
 
@@ -57,7 +55,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 //Custom Post Type
-function create_post_type() {
+/* function create_post_type() {
     register_post_type('Portfolio',
         array(
             'label' => __('portfolio'),
@@ -82,12 +80,12 @@ function create_post_type() {
     );
 
 }
-add_action( 'init', 'create_post_type' );
+add_action( 'init', 'create_post_type' ); */
 
 
 //Taxonomie
 
-function themes_taxonomy() {
+/* function themes_taxonomy() {
     register_taxonomy(
         'technos',
         'portfolio',
@@ -103,7 +101,7 @@ function themes_taxonomy() {
     );
 }
 add_action( 'init', 'themes_taxonomy');
-
+ */
 
 // ACF
 
@@ -173,3 +171,16 @@ add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 
 add_filter('use_block_editor_for_post', '__return_false');
+
+// Disable Gutenberg
+if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
+	
+	// WP > 5 beta
+	add_filter('use_block_editor_for_post_type', '__return_false', 100);
+	
+} else {
+	
+	// WP < 5 beta
+	add_filter('gutenberg_can_edit_post_type', '__return_false');
+	
+}
