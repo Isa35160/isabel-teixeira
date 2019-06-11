@@ -1,9 +1,9 @@
-<?php /* Template Name: Experiences */ ?>
+<?php /* Template Name: Formations */ ?>
 
 <?php get_header(); ?>
 
 <?php while (have_posts()): the_post(); ?>
-    <div class="experiences">
+    <div class="formations">
         <div class="container">
         </div>
     </div>
