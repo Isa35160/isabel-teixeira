@@ -19,19 +19,19 @@
 <body <?php body_class(); ?>>
 
 <header>
-          <div class="container">
-                    <div class="header_nav">
-                              <div class="header_logo">
-                                        <a class="logo" href="/isabel-teixeira">Isabel Teixeira</a>
-                              </div>
-                              <div class="header_nav_principal">
-                                  <?php wp_nav_menu(array('theme_location' => 'menu-principal', 'container' => 'nav')); ?>
-                              </div>
-                              <div class="menu_burger">
-                                        <i class="fas fa-bars"></i>
-                              </div>
-                    </div>
-          </div>
+    <div class="container">
+            <div class="header_nav">
+                        <div class="header_logo">
+                                <a class="logo" href="/">Isabel Teixeira</a>
+                        </div>
+                        <div class="header_nav_principal animated">
+                            <?php wp_nav_menu(array('theme_location' => 'menu-principal', 'container' => 'nav')); ?>
+                        </div>
+                        <div class="menu_burger">
+                                <i class="fas fa-bars"></i>
+                        </div>
+            </div>
+    </div>
 
 
 </header>

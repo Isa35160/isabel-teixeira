@@ -11,9 +11,65 @@ header {
   justify-content: space-between;
   align-items: center; }
   header .header_logo a {
-    font-family: "Handlee", cursive;
-    font-size: 2rem;
+    font-family: "Anton", sans-serif;
+    font-size: 1.3rem;
     text-shadow: 1px 1px 20px #a4a4a4; }
+  header .header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 15px;
+    position: relative; }
+    header .header_nav .header_nav_principal {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(34, 34, 34, 0.85);
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      margin: 0 auto;
+      padding: 15px 5px;
+      transition: all 0.3s; }
+      header .header_nav .header_nav_principal nav ul.menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        header .header_nav .header_nav_principal nav ul.menu li.menu-item {
+          padding: 25px 15px;
+          border-top: 1px solid #fff;
+          border-bottom: 1px solid #fff;
+          margin: 15px 0;
+          height: 20vh; }
+          header .header_nav .header_nav_principal nav ul.menu li.menu-item:nth-child(1) {
+            background-image: url("images/competences_small.png");
+            background-size: cover;
+            background-position: center; }
+          header .header_nav .header_nav_principal nav ul.menu li.menu-item:nth-child(2) {
+            background-image: url("images/formation_small.png");
+            background-size: cover; }
+          header .header_nav .header_nav_principal nav ul.menu li.menu-item:nth-child(3) {
+            background-image: url("images/experiences_small.png");
+            background-size: cover;
+            background-position: center; }
+          header .header_nav .header_nav_principal nav ul.menu li.menu-item:nth-child(4) {
+            background-image: url("images/portfolio_small.png");
+            background-size: cover; }
+          header .header_nav .header_nav_principal nav ul.menu li.menu-item a {
+            font-family: "Allerta", sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fff;
+            padding: 20px 0; }
+  header .menu_burger {
+    font-size: 1.3rem; }
+
+@media (min-width: 800px) {
+  header .header_logo a {
+    font-size: 2rem; }
   header .header_nav {
     display: flex;
     justify-content: space-between;
@@ -43,14 +99,33 @@ header {
             font-family: "Allerta", sans-serif;
             font-weight: bold; }
   header .menu_burger {
-    display: none; }
+    display: none; } }
 
 footer {
-  min-height: 10vh;
   color: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  min-height: 10vh; }
+  footer i {
+    font-size: 1rem;
+    padding: 0 10px; }
+
+body.home {
+  background-image: url("images/homepage.png");
+  background-size: cover;
+  overflow: hidden;
+  background-position: bottom;
+  color: #fff; }
+  body.home .main_homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; }
+    body.home .main_homepage h1 {
+      padding-bottom: 30px;
+      text-align: center; }
 
 * {
   box-sizing: border-box;
@@ -68,35 +143,39 @@ ol {
   list-style-type: none;
   margin: 0; }
 
+img {
+  max-width: 100%; }
+
+h1 {
+  font-size: 1.6rem; }
+
 h2 {
-  font-size: 2rem;
+  font-size: 1.5 rem;
   font-weight: 400;
   margin: 15px 0; }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   margin: 15px 0; }
 
-img {
-  max-width: 100%; }
-
 .container {
-  max-width: 1400px;
+  max-width: 400px;
   width: 100%;
   margin: 0 auto; }
 
-body {
-  background-image: url("images/homepage.png");
-  background-size: cover;
-  overflow: hidden;
-  background-position: bottom;
-  color: #fff; }
-  body .main_homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh; }
-    body .main_homepage h1 {
-      padding-bottom: 30px; }
+@media (min-width: 800px) {
+  h1 {
+    font-size: 2.2rem; }
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 15px 0; }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 15px 0; }
+  .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto; } }

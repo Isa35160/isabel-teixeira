@@ -1,7 +1,12 @@
 footer{
-  min-height: 10vh;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 10vh;
+
+  i{
+    font-size: 1rem;
+    padding:  0 10px;
+  }
 }

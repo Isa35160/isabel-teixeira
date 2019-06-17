@@ -1,3 +1,11 @@
+// Burger Menu
+let burger = '.menu_burger';
+let mainNav = '.header_nav_principal';
+$(burger).on('click', function () {
+    $(mainNav).attr("style", "display: block");
+});
+
+
 let author = document.getElementById('author');
 if (author) {
     author.setAttribute("placeholder", "Nom");
@@ -19,17 +27,6 @@ if (submit) {
 
 
 
-let comment3 = document.getElementById('comment-3');
-if (comment3) {
-    comment3.classList.add("fas");
-    comment3.classList.add("fa-angle-down");
-}
 
 
-let selector = '.villes_nav a';
-
-$(selector).on('click', function(){
-    $(selector).removeClass('active');
-    $(this).addClass('active');
-});
 

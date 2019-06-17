@@ -13,8 +13,8 @@ $allerta: 'Allerta',
 sans-serif;
 $courgette: 'Courgette',
 cursive;
-$handlee: 'Handlee',
-cursive;
+$anton: 'Anton',
+sans-serif;
 
 
 //Variables - Couleurs
@@ -27,6 +27,11 @@ $links_hover :#000;
 @import 'contact';
 @import 'footer';
 @import 'login';
+@import 'home';
+@import 'formations';
+@import 'experiences';
+@import 'portfolio';
+@import '../node_modules/animate-sass/animate'
 
 
 * {
@@ -48,48 +53,58 @@ ol {
     margin: 0;
 }
 
-h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin: 15px 0;
-}
-
-h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 15px 0;
-}
-
 img {
     max-width: 100%;
 }
 
 
+h1{
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.5 rem;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
 .container {
-    max-width: 1400px;
+    max-width: 400px;
     width: 100%;
     margin: 0 auto;
 }
 
 
-// HOMEPAGE
+@media (min-width: 800px) {
 
-body{
-    background-image: url('images/homepage.png');
-    background-size: cover;
-    overflow: hidden; 
-    background-position: bottom;
-    color: #fff;
-    
-
-    .main_homepage{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 80vh;
-        h1{
-            padding-bottom: 30px;
-        }
+    h1 {
+        font-size: 2.2rem;
     }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 15px 0;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 15px 0;
+    }
+
+    .container {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
 }
+
+
